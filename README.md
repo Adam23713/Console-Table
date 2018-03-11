@@ -1,5 +1,5 @@
 # C++ Console Table
-This is a simple console table to C++ programs
+This is a simple console table for C++ programs
 
 # Prerequisites
 You need a C++ compiler, for example  g++, VS C++ etc.
