@@ -8,8 +8,8 @@ You need a C++ compiler, for example  g++, VS C++ etc.
 g++ your_program.cpp ConsoleTable.cpp -o program
 
 # Example
- #include "../ConsoleTable.h"
 
+##include "../ConsoleTable.h"
 int main(int argc, char *argv[])
 {
 	
@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 }
 
 #Output
+
 +------------------------------------------------+
 |   Name    |           Address          | Years |
 +------------------------------------------------+
