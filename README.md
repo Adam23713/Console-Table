@@ -8,7 +8,7 @@ You need a C++ compiler, for example  g++, VS C++ etc.
 g++ your_program.cpp ConsoleTable.cpp -o program
 
 # Example
-
+```C++
 #include "../ConsoleTable.h"
 int main(int argc, char *argv[])
 {
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	employers.WriteTable(Align::Left, &std::cerr);
 	return 0;
 }
-
+```
 #Output
 
 +------------------------------------------------+
