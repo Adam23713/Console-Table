@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 #Output
 
 +------------------------------------------------+
-<br>|   Name    |           Address          | Years |
+|   Name    |           Address          | Years |
 <br>+------------------------------------------------+
 <br>|  Github   |     https://github.com/    | 2008  |
 <br>+------------------------------------------------+
