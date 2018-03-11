@@ -41,23 +41,8 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
-#Output
-
-+------------------------------------------------+
-|   Name    |           Address          | Years |
-<br>+------------------------------------------------+
-<br>|  Github   |     https://github.com/    | 2008  |
-<br>+------------------------------------------------+
-<br>| Facebook  |    https://facebook.com/   | 2004  |
-<br>+------------------------------------------------+
-<br>| Wikipedia | https://www.wikipedia.org/ | 2001  |
-<br>+------------------------------------------------+
-<br>
-<br>+---------------------------------+
-<br>|First Name|Second Name|Birthday  |
-<br>+---------------------------------+
-<br>|Teszt     |Elek       |1988.01.13|
-<br>+---------------------------------+
+# Output
+![alt text](https://user-images.githubusercontent.com/12465316/37253690-52ad0fe8-2535-11e8-9407-95c4eb3d2666.png)
 
 
 # Authors
