@@ -64,4 +64,4 @@ Kertész Ádám
 <br>My webpage: https://callprog.hu
  
 # License
-This project is licensed under the GNU General Public v3.0 License - see the LICENSE.md file for details
+This project is licensed under the Simplified BSD License or FreeBSD License - see the LICENSE.md file for details
