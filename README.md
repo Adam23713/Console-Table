@@ -9,7 +9,7 @@ g++ your_program.cpp ConsoleTable.cpp -o program
 
 # Example
 
-##include "../ConsoleTable.h"
+#include "../ConsoleTable.h"
 int main(int argc, char *argv[])
 {
 	
@@ -44,20 +44,20 @@ int main(int argc, char *argv[])
 #Output
 
 +------------------------------------------------+
-|   Name    |           Address          | Years |
-+------------------------------------------------+
-|  Github   |     https://github.com/    | 2008  |
-+------------------------------------------------+
-| Facebook  |    https://facebook.com/   | 2004  |
-+------------------------------------------------+
-| Wikipedia | https://www.wikipedia.org/ | 2001  |
-+------------------------------------------------+
-
-+---------------------------------+
-|First Name|Second Name|Birthday  |
-+---------------------------------+
-|Teszt     |Elek       |1988.01.13|
-+---------------------------------+
+<br>|   Name    |           Address          | Years |
+<br>+------------------------------------------------+
+<br>|  Github   |     https://github.com/    | 2008  |
+<br>+------------------------------------------------+
+<br>| Facebook  |    https://facebook.com/   | 2004  |
+<br>+------------------------------------------------+
+<br>| Wikipedia | https://www.wikipedia.org/ | 2001  |
+<br>+------------------------------------------------+
+<br>
+<br>+---------------------------------+
+<br>|First Name|Second Name|Birthday  |
+<br>+---------------------------------+
+<br>|Teszt     |Elek       |1988.01.13|
+<br>+---------------------------------+
 
 
 # Authors
