@@ -8,18 +8,21 @@ ConsoleTable::ConsoleTable(unsigned int numberOfColumns) : _numberOfColumns(numb
 
 void ConsoleTable::WriteTable(Align align, std::ostream * outputStream) const
 {
+	int gridWidth = 0;
 	std::stringstream stream;
 	std::vector<int> columnsWidth = GetColumnsMaxWidth();
-	int gridWidth = std::accumulate(columnsWidth.begin(), columnsWidth.end(), 0);
 
 	for (int i = 0; i < _rows.size(); i++)
 	{
+		if (gridWidth == 0)
+		{
+			std::stringstream testStream;
+			GenerateStream(testStream, align, i--, columnsWidth);
+			gridWidth = testStream.str().length();
+			continue;
+		}
 		WriteBorderToStream(gridWidth, &stream);
-
-		if(align == Align::Center)
-			stream << AlignRowToCenter(i, columnsWidth);
-		else
-			stream << AlignRowToLeftOrRight(align, i, columnsWidth);
+		GenerateStream(stream, align, i, columnsWidth);
 	}
 	WriteBorderToStream(gridWidth, &stream);
 
@@ -33,6 +36,14 @@ void ConsoleTable::AddNewRow(const std::forward_list<std::string>& list)
 	row.reserve(_numberOfColumns);
 	std::copy_n(list.begin(), _numberOfColumns, std::back_inserter(row));
 	_rows.emplace_back(row);
+}
+
+void ConsoleTable::GenerateStream(std::stringstream& stream, Align align, int i, const std::vector<int>& columnsWidth) const
+{
+	if (align == Align::Center)
+		stream << AlignRowToCenter(i, columnsWidth);
+	else
+		stream << AlignRowToLeftOrRight(align, i, columnsWidth);
 }
 
 std::string ConsoleTable::AlignRowToLeftOrRight(Align align, int index, const std::vector<int>&columnsWidth) const
@@ -74,7 +85,7 @@ std::string  ConsoleTable::AlignRowToCenter(int index, const std::vector<int>&co
 void ConsoleTable::WriteBorderToStream(int width, std::stringstream* stream) const
 {
 	*stream << "+";
-	for (int k = 0; k <= width + 1; k++) *stream << "-";
+	for (int k = 0; k <= width - 4; k++) *stream << "-";
 	*stream << "+" << std::endl;
 }
 
@@ -90,3 +101,4 @@ std::vector<int> ConsoleTable::GetColumnsMaxWidth() const
 	}
 	return columnsWidth;
 }
+

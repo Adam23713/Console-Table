@@ -11,7 +11,7 @@
 #include <sstream>
 #include <forward_list>
 
-enum class Align {Left, Right, Center};
+enum class Align { Left, Right, Center };
 typedef std::forward_list<std::string> Row;
 
 class ConsoleTable
@@ -26,6 +26,7 @@ public:
 	void AddNewRow(const std::forward_list<std::string>& list);
 
 private:
+	void GenerateStream(std::stringstream&, Align align, int i, const std::vector<int>& columnsWidth) const;
 	std::string AlignRowToLeftOrRight(Align align, int index, const std::vector<int>&columnsWidth) const;
 	std::string AlignRowToCenter(int index, const std::vector<int>&columnsWidth) const;
 	void WriteBorderToStream(int width, std::stringstream* stream) const;
@@ -35,5 +36,4 @@ private:
 	unsigned int _numberOfColumns;
 	std::vector<std::vector<std::string>> _rows;
 };
-
 #endif
